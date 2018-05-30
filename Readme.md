@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Маруся](https://up.htmlacademy.ru/htmlcss/21/user/626063).
-* Наставник: `Андрей Островский`.
+* Наставник: [Андрей Островский](https://htmlacademy.ru/profile/grandmaus).
 
 ---
 
