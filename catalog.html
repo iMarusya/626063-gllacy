@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог Gllacy Shop</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -40,13 +41,92 @@
         </ul>
         <ul class="user-nav">
           <li class="btn search-btn">
-            <a class="user-nav-link" href="#">Поиск</a> <!--search.svg-->
+            <a class="user-nav-link" href="search.html">Поиск</a> <!--Нужен тут адрес?-->
+            <!--search.svg-->
+            <section class="form form-search">
+              <h2 class="visually-hidden">Поиск</h2> <!--Нужен этот заголовок теперь?-->
+              <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+                <label class="visually-hidden" for="search-form">Что ищем?</label>
+                <input class="search-input" id="search-form" type="search" placeholder="Что ищем?">
+                <!--Нужна тут скрытая кнопка или работа формы по enter тоже подойдёт?-->
+                <button class="visually-hidden" type="submit">Искать</button>
+              </form>
+            </section>
           </li>
           <li class="btn login-btn">
-            <a class="user-nav-link" href="#">Вход</a> <!--login.svg-->
+            <a class="user-nav-link" href="login.html">Вход</a> <!--Нужен тут адрес?-->
+            <!--login.svg-->
+            <section class="form form-login">
+              <h2 class="visually-hidden">Личный кабинет</h2>
+              <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label class="visually-hidden" for="userlogin">Электронная почта</label>
+                  <input class="login-input" id="userlogin" type="email" placeholder="Электронная почта" required>
+                </p>
+                <p>                      
+                  <label class="visually-hidden" for="userpassword">Пароль</label>
+                  <input class="login-input" id="userpassword" type="password" placeholder="Пароль" required>
+                </p>
+                <button class="btn" type="submit">Войти</button>
+                <a class="login-link" href="#">Забыли пароль?</a>
+                <a class="login-link" href="#">Новая регистрация</a>
+              </form> 
+            </section>
           </li>
           <li class="btn basket-btn">
-            <a class="user-nav-link" href="#">Корзина</a> <!--basket.svg basket-full.svg-->
+            <a class="user-nav-link" href="basket.html">Корзина</a> <!--Нужен тут адрес?-->
+            <!--basket.svg basket-full.svg-->
+            <section class="form form-basket">
+              <h2 class="visually-hidden">Корзина</h2>
+              <table class="basket-table">
+                <tr>
+                  <td>
+                    <label class="visually-hidden" for="basket-delete-button">Удалить</label>
+                    <button class="basket-delete" id="basket-delete-button" type="button"></button>
+                    <!--X.svg-->
+                  </td>
+                  <td>          
+                    <a class="basket-goods" href="#">
+                      <img src="img/basket-goods-1.jpg" width="33" height="33" alt="Товар 1">
+                    </a>
+                  </td>
+                  <td>
+                    Пломбир с апельсиновым джемом
+                  </td>
+                  <td>
+                    1,5 кг х<span class="basket-price"> 200 руб.</span>
+                  </td>
+                  <td>
+                    300 руб
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="visually-hidden" for="basket-delete-button">Удалить</label>
+                    <button class="basket-delete" id="basket-delete-button" type="button"></button>
+                    <!--X.svg-->
+                  </td>
+                  <td>          
+                    <a class="basket-goods" href="#">
+                      <img src="img/basket-goods-2.jpg" width="33" height="33" alt="Товар 1">
+                    </a>
+                  </td>
+                  <td>
+                    Клубничный пломбир с присыпкой из белого шоколада
+                  </td>
+                  <td>
+                    1,5 кг х<span class="basket-price"> 300 руб.</span>
+                  </td>
+                  <td>
+                    450 руб
+                  </td>
+                </tr>
+              </table>
+              <b>Итого: 750 рублей</b>
+              <p>
+                <button class="btn" type="button">Оформить заказ</button>
+              </p>
+            </section>
           </li>
         </ul>
       </nav>
@@ -58,22 +138,59 @@
 
     <main class="container">
 
-      <ul class="breadcrumbs"> <!--icon-right-small.svg-->
+      <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="index.html">Главная</a>
         </li>
+        <li class="breadcrumbs-item">&raquo;</li>
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="#">Каталог</a>
         </li>
+        <li class="breadcrumbs-item">&raquo;</li>
         <li class="breadcrumbs-link breadcrumbs-current">Сливочное</li>
       </ul>
 
       <h1 class="page-title">Сливочное мороженое</h1>
 
       <section class="filters">
-        <h2 class="visually-hidden">Фильтр и сортировка товаров</h2>
-        <!--select, input, form-->
         <!--icon-down-dir.svg radio-off.svg radio-on.svg filter-button.svg checkbox-off.svg checkbox-on.svg-->
+        <h2 class="visually-hidden">Фильтр и сортировка товаров</h2>
+        <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="filters-item">
+            <label class="filters-label" for="filters-sort">Сортировка:</label>
+            <p>
+              <select class="sort" id="filters-sort" name="sort-select[]">
+                <option value="popular" selected>По популярности</option>
+                <option value="cheap">Сначала недорогие</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="fatcontent">По жирности</option>
+              </select>
+            </p>
+          </div>
+          <div class="filters-item">
+            <p>Цена:</p> <!--Позже-->
+          </div>
+          <div class="filters-item">
+            <label class="filters-label" for="filters-fatcontent">Жирность:</label>
+            <p>
+              <input class="fat-percent" name="filters-fatcontent" type="radio" value="0">0%
+              <input class="fat-percent" name="filters-fatcontent" type="radio" value="less10" checked>до 10%
+              <input class="fat-percent" name="filters-fatcontent" type="radio" value="less30">до 30%
+              <input class="fat-percent" name="filters-fatcontent" type="radio" value="more30">выше 30%
+            </p>
+          </div>
+          <div class="filters-item">
+            <label class="filters-label" for="filters-filler">Наполнители:</label>
+            <p>
+              <input class="filler" name="filters-filler" type="checkbox" value="chocolate" checked>шоколадные
+              <input class="filler" name="filters-filler" type="checkbox" value="sugar" checked>сахарные присыпки
+              <input class="filler" name="filters-filler" type="checkbox" value="fruit">фрукты
+              <input class="filler" name="filters-filler" type="checkbox" value="syrup">сиропы
+              <input class="filler" name="filters-filler" type="checkbox" value="jam">джемы
+            </p>
+          </div>
+          <button class="btn btn-filters" type="submit">Применить</button>
+        </form>
       </section>
 
       <section class="catalog">
@@ -180,6 +297,9 @@
           
         <!--Пагинатор-->
         <ul class="pagination-list">
+          <li class="pagination-item">
+            <a class="paginator-link" href="#">&lt;</a>  <!--icon-right-small-.svg-->
+          </li>
           <li class="pagination-item pagination-item-current">
             <a class="paginator-link" href="#">1</a>
           </li>
@@ -196,7 +316,7 @@
             <a class="paginator-link" href="#">5</a>
           </li>
           <li class="pagination-item">
-            <a class="paginator-link" href="#">&gt;</a>
+            <a class="paginator-link" href="#">&gt;</a>  <!--icon-right-small.svg-->
           </li>
         </ul>
       </section>
@@ -240,24 +360,6 @@
         Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a> &copy; 2017
       </div>
     </footer>
-
-    <section class="modal modal-search">
-      <h2>Поиск</h2>
-      <!--input-->
-    </section>
-
-    <section class="modal modal-login">
-      <h2 class="visually-hidden">Личный кабинет</h2>
-      <!--form and input-->
-      <a class="login-link" href="#">Забыли пароль?</a>
-      <a class="login-link" href="#">Новая регистрация</a>
-    </section>
-
-    <section class="modal modal-basket">
-      <h2 class="visually-hidden">Корзина</h2>
-      <!--form-->
-      <!--X.svg-->
-    </section>
 
   </body>
 </html>

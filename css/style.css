@@ -1,0 +1,20 @@
+
+.site-nav .sub-nav {
+	display:none;
+}
+
+.site-nav .site-nav-item:hover .sub-nav {
+	display: block;
+}
+
+.user-nav .form-search,
+.user-nav .form-login,
+.user-nav .form-basket {
+	display: none;
+}
+
+.user-nav .search-btn:hover .form-search,
+.user-nav .login-btn:hover .form-login,
+.user-nav .basket-btn:hover .form-basket {
+	display: block;
+}
