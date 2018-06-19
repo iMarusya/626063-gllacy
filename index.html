@@ -41,23 +41,19 @@
         </ul>
         <ul class="user-nav">
           <li class="btn search-btn">
-            <a class="user-nav-link" href="search.html">Поиск</a> <!--Нужен тут адрес?-->
+            <a class="user-nav-link" href="#">Поиск</a>
             <!--search.svg-->
-            <section class="form form-search">
-              <h2 class="visually-hidden">Поиск</h2> <!--Нужен этот заголовок теперь?-->
+            <div class="form form-search">
               <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
                 <label class="visually-hidden" for="search-form">Что ищем?</label>
                 <input class="search-input" id="search-form" type="search" placeholder="Что ищем?">
-                <!--Нужна тут скрытая кнопка или работа формы по enter тоже подойдёт?-->
-                <button class="visually-hidden" type="submit">Искать</button> 
               </form>
-            </section>
+            </div>
           </li>
           <li class="btn login-btn">
-            <a class="user-nav-link" href="login.html">Вход</a> <!--Нужен тут адрес?-->
+            <a class="user-nav-link" href="#">Вход</a>
             <!--login.svg-->
-            <section class="form form-login">
-              <h2 class="visually-hidden">Личный кабинет</h2>
+            <div class="form form-login">
               <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                 <p>
                   <label class="visually-hidden" for="userlogin">Электронная почта</label>
@@ -71,21 +67,19 @@
                 <a class="login-link" href="#">Забыли пароль?</a>
                 <a class="login-link" href="#">Новая регистрация</a>
               </form> 
-            </section>
+            </div>
           </li>
           <li class="btn basket-btn">
-            <a class="user-nav-link" href="basket.html">Корзина</a> <!--Нужен тут адрес?-->
+            <a class="user-nav-link" href="#">Корзина</a>
             <!--basket.svg basket-full.svg-->
-            <section class="form form-basket">
+            <div class="form form-basket">
               <h2 class="visually-hidden">Корзина</h2>
               <table class="basket-table">
                 <tr>
                   <td>
-                    <label class="visually-hidden">
-                      Удалить
-                      <button class="basket-delete" type="button"></button>
-                      <!--X.svg-->
-                    </label>
+                    <button class="basket-delete" type="button">
+                      <span class="visually-hidden">Удалить</span>  <!--X.svg-->  
+                    </button>            
                   </td>
                   <td>          
                     <a class="basket-goods" href="#">
@@ -104,11 +98,9 @@
                 </tr>
                 <tr>
                   <td>
-                    <label class="visually-hidden">
-                      Удалить
-                      <button class="basket-delete" type="button"></button>
-                      <!--X.svg-->
-                    </label>
+                    <button class="basket-delete" type="button">
+                      <span class="visually-hidden">Удалить</span>  <!--X.svg-->  
+                    </button>  
                   </td>
                   <td>          
                     <a class="basket-goods" href="#">
@@ -162,6 +154,7 @@
             <a class="btn" href="#">Давайте оба!</a>
           </li>
         </ul>
+        <!--Позже-->
         <label class="visually-hidden" for="slider1">Слайдер 1</label>
         <button class="slider-btn" id="slider1" type="button"></button>
         <label class="visually-hidden" for="slider2">Слайдер 2</label>
@@ -313,8 +306,7 @@
     </footer>
 
     <section class="modal modal-feedback">
-      <h2 class="visually-hidden">Обратная связь</h2>
-      <h3>Мы обязательно вам ответим!</h3>
+      <h2>Мы обязательно вам ответим!</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label class="visually-hidden" for="feedback-name">Имя</label>
@@ -326,12 +318,13 @@
         </p>
         <p>
           <label class="visually-hidden" for="feedback-text">Отзыв</label>
-          <input class="feedback-input-text" id="feedback-text" type="email" placeholder="Напишите что-нибудь...">
+          <textarea class="feedback-input-text" id="feedback-text" placeholder="Напишите что-нибудь..." required></textarea>
         </p>
         <button class="btn" type="submit">Отправить</button>
       </form>
-      <label class="visually-hidden" for="modal-close-button">Закрыть</label>
-      <button class="modal-close" id="modal-close-button" type="button"></button> <!--X-big.svg-->
+      <button class="modal-close" id="modal-close-button" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button> <!--X-big.svg-->
     </section>
 
   </body>
