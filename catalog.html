@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог Gllacy Shop</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -18,7 +20,7 @@
               <li class="sub-nav-item">
                 <a class="sub-nav-link" href="#"><b>Новинки</b></a>
               </li>
-              <li class="sub-nav-item">
+              <li class="sub-nav-item sub-nav-current">
                 <a class="sub-nav-link" href="#">Сливочное</a>
               </li>
               <li class="sub-nav-item">
@@ -40,7 +42,7 @@
           </li>
         </ul>
         <ul class="user-nav">
-          <li class="btn search-btn">
+          <li class="search-btn">
             <a class="user-nav-link" href="#">Поиск</a>
             <!--search.svg-->
             <div class="form form-search">
@@ -50,7 +52,7 @@
               </form>
             </div>
           </li>
-          <li class="btn login-btn">
+          <li class="login-btn">
             <a class="user-nav-link" href="#">Вход</a>
             <!--login.svg-->
             <div class="form form-login">
@@ -69,7 +71,7 @@
               </form> 
             </div>
           </li>
-          <li class="btn basket-btn">
+          <li class="basket-btn">
             <a class="user-nav-link" href="#">Корзина</a>
             <!--basket.svg basket-full.svg-->
             <section class="form form-basket">
@@ -143,7 +145,7 @@
           <a class="breadcrumbs-link" href="#">Каталог</a>
         </li>
         <li class="breadcrumbs-item">&raquo;</li>
-        <li class="breadcrumbs-link breadcrumbs-current">Сливочное</li>
+        <li class="breadcrumbs-item breadcrumbs-link breadcrumbs-current">Сливочное</li>
       </ul>
 
       <h1 class="page-title">Сливочное мороженое</h1>
@@ -209,7 +211,8 @@
         <!--1 ряд-->
         <article class="catalog-item">
           <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-          <b>310</b> /кг
+          <span class="catalog-price">310</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/orange-ice-cream.jpg" width="267" height="267" alt="Апельсиновое мороженое">
           </a> 
@@ -217,7 +220,8 @@
         </article>
         <article class="catalog-item">
           <h3>Сливочно-кофейное с кусочками шоколада</h3>
-          <b>380</b> /кг
+          <span class="catalog-price">380</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/coffee-ice-cream.jpg" width="267" height="267" alt="Кофейное мороженое">
           </a>
@@ -225,7 +229,8 @@
         </article>
         <article class="catalog-item">
           <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-          <b>355</b> /кг
+          <span class="catalog-price">355</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/strawberry-ice-cream.jpg" width="267" height="267" alt="Клубничное мороженое">
           </a>
@@ -233,7 +238,8 @@
         </article>
         <article class="catalog-item">
           <h3>Сливочное крем-брюле с карамельной подливкой</h3>
-          <b>415</b> /кг
+          <span class="catalog-price">415</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/creme-brulee-cream.jpg" width="267" height="267" alt="Крем-брюле">
           </a>
@@ -242,7 +248,8 @@
         <!--2 ряд-->
         <article class="catalog-item">
           <h3>Сливочное с брусничным джемом</h3>
-          <b>325</b> /кг
+          <span class="catalog-price">325</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/cowberry-ice-cream.jpg" width="267" height="267" alt="Брусничное мороженое">
           </a>
@@ -250,7 +257,8 @@
         </article>
         <article class="catalog-item">
           <h3>Сливочно-черничное с цельными ягодами черники</h3>
-          <b>410</b> /кг
+          <span class="catalog-price">410</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/blueberry-ice-cream.jpg" width="267" height="267" alt="Черничное мороженое">
           </a>
@@ -258,7 +266,8 @@
         </article>
         <article class="catalog-item">
           <h3>Сливочно-лимонное с карамельной присыпкой</h3>
-          <b>375</b> /кг
+          <span class="catalog-price">375</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/lemon-ice-cream.jpg" width="267" height="267" alt="Лимонное мороженое">
           </a>
@@ -266,7 +275,8 @@
         </article>
         <article class="catalog-item">
           <h3>Сливочное с шоколадной стружкой</h3>
-          <b>320</b> /кг
+          <span class="catalog-price">320</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/chocolate-ice-cream.jpg" width="267" height="267" alt="Шоколадное мороженое">
           </a>
@@ -275,7 +285,8 @@
         <!--3 ряд-->
         <article class="catalog-item">
           <h3>Сливочно-ванильное с кусочками шоколада </h3>
-          <b>440</b> /кг
+          <span class="catalog-price">440</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/vanilla-ice-cream.jpg" width="267" height="267" alt="Ванильное мороженое">
           </a>
@@ -283,7 +294,8 @@
         </article>
         <article class="catalog-item">
           <h3>Сливочноe с ментоловым сиропом</h3>
-          <b>435</b> /кг
+          <span class="catalog-price">435</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/menthol-ice-cream.jpg" width="267" height="267" alt="Ментоловое мороженое">
             </a>
@@ -291,7 +303,8 @@
         </article>
         <article class="catalog-item">
           <h3>Сливочное с кусочками черного шоколада</h3>
-          <b>355</b> /кг
+          <span class="catalog-price">355</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/dark-chocolate-ice-cream.jpg" width="267" height="267" alt="Мороженое с тёмным шоколадом">
           </a>
@@ -299,7 +312,8 @@
         </article>
         <article class="catalog-item">
           <h3>Сливочное с мятным сиропом</h3>
-          <b>420</b> /кг
+          <span class="catalog-price">420</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/mint-ice-cream.jpg" width="267" height="267" alt="Мятное мороженое">
           </a>
@@ -307,26 +321,26 @@
         </article>
           
         <!--Пагинатор-->
-        <ul class="pagination-list">
-          <li class="pagination-item">
-            <a class="paginator-link" href="#">&lt;</a>  <!--icon-right-small-.svg-->
+        <ul class="paginator-list">
+          <li class="paginator-item">
+            &lt;  <!--icon-right-small-.svg-->
           </li>
-          <li class="pagination-item pagination-item-current">
-            <a class="paginator-link" href="#">1</a>
+          <li class="paginator-item">
+            <a class="paginator-link paginator-current" href="#">1</a>
           </li>
-          <li class="pagination-item">
+          <li class="paginator-item">
             <a class="paginator-link" href="#">2</a>
           </li>
-          <li class="pagination-item">
+          <li class="paginator-item">
             <a class="paginator-link" href="#">3</a>
           </li>
-          <li class="pagination-item">
+          <li class="paginator-item">
             <a class="paginator-link" href="#">4</a>
           </li>
-          <li class="pagination-item">
+          <li class="paginator-item">
             <a class="paginator-link" href="#">5</a>
           </li>
-          <li class="pagination-item">
+          <li class="paginator-item">
             <a class="paginator-link" href="#">&gt;</a>  <!--icon-right-small.svg-->
           </li>
         </ul>
@@ -334,7 +348,7 @@
     </main>
         
     <footer class="page-footer">
-       <ul class="footer-social"> <!--tw.svg insta.svg fb.svg vk.svg-->
+      <ul class="footer-social"> <!--tw.svg insta.svg fb.svg vk.svg-->
         <li class="social-btn">
           <a class="social-link" href="#">Твитер</a>
         </li>
@@ -368,7 +382,7 @@
         <a class="copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
           <img alt="html academy" src="img/htmlacademy.svg" width="108" height="39">
         </a>
-        Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a> &copy; 2017
+        Сделано в <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a> &copy; 2017
       </div>
     </footer>
 

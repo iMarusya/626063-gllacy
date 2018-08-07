@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Gllacy Shop</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -40,7 +42,7 @@
           </li>
         </ul>
         <ul class="user-nav">
-          <li class="btn search-btn">
+          <li class="search-btn">
             <a class="user-nav-link" href="#">Поиск</a>
             <!--search.svg-->
             <div class="form form-search">
@@ -50,7 +52,7 @@
               </form>
             </div>
           </li>
-          <li class="btn login-btn">
+          <li class="login-btn">
             <a class="user-nav-link" href="#">Вход</a>
             <!--login.svg-->
             <div class="form form-login">
@@ -69,10 +71,10 @@
               </form> 
             </div>
           </li>
-          <li class="btn basket-btn">
+          <li class="basket-btn">
             <a class="user-nav-link" href="#">Корзина</a>
             <!--basket.svg basket-full.svg-->
-            <div class="form form-basket">
+            <section class="form form-basket">
               <h2 class="visually-hidden">Корзина</h2>
               <table class="basket-table">
                 <tr>
@@ -118,7 +120,7 @@
                   </td>
                 </tr>
               </table>
-              <b>Итого: 750 рублей</b>
+              <span class="basket-total">Итого: 750 рублей</span>
               <p>
                 <button class="btn" type="button">Оформить заказ</button>
               </p>
@@ -141,17 +143,17 @@
           <li class="slider-item">
             Крем-брюле и пломбир<br> <!--slider-1.jpg-->
             c малиновым джемом
-            <a class="btn" href="#">Давайте оба!</a>
+            <a class="btn btn-slider" href="#">Давайте оба!</a>
           </li>
           <li class="slider-item">
             Шоколадный пломбир<br> <!--slider-2.jpg-->
             и лимонный сорбет
-            <a class="btn" href="#">Давайте оба!</a>
+            <a class="btn btn-slider" href="#">Давайте оба!</a>
           </li>
           <li class="slider-item">
             Пломбир с помадкой<br> <!--slider-3.jpg-->
             и клубничный щербет
-            <a class="btn" href="#">Давайте оба!</a>
+            <a class="btn btn-slider" href="#">Давайте оба!</a>
           </li>
         </ul>
         <!--Позже-->
@@ -180,8 +182,9 @@
         <!--hit.svg P.svg-->
         <h2 class="visually-hidden">Хиты</h2>
         <article class="catalog-item">
-          <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-          <b>310</b> /кг
+          <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3> <!--Может, сделать ссылкой?-->
+          <span class="catalog-price">310</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/orange-ice-cream.jpg" width="267" height="267" alt="Апельсиновое мороженое">
           </a>
@@ -189,7 +192,8 @@
         </article>
         <article class="catalog-item">
           <h3>Сливочно-кофейное с кусочками шоколада</h3>
-          <b>380</b> /кг
+          <span class="catalog-price">380</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/coffee-ice-cream.jpg" width="267" height="267" alt="Кофейное мороженое">
           </a>
@@ -197,7 +201,8 @@
         </article>
         <article class="catalog-item">
           <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-          <b>355</b> /кг
+          <span class="catalog-price">355</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/strawberry-ice-cream.jpg" width="267" height="267" alt="Клубничное мороженое">
           </a>
@@ -205,7 +210,8 @@
         </article>
         <article class="catalog-item">
           <h3>Сливочное крем-брюле с карамельной подливкой</h3>
-          <b>415</b> /кг
+          <span class="catalog-price">415</span>
+          <span class="catalog-kg">/кг</span>
           <a class="catalog-img" href="#">
             <img src="img/creme-brulee-cream.jpg" width="267" height="267" alt="Крем-брюле">
           </a>
@@ -255,14 +261,14 @@
         <h2 class="visually-hidden">Контактная информация</h2>
         <p>
           Адрес главного офиса и офлайн-магазина:<br>
-          <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+          <span class="contacts-adress">ул. Большая Конюшенная 19/8, Санкт-Петербург</span>
         </p>
         <p>
           Для заказов по телефону:<br>
-          <a class="phone" href="tel:+781245502525">8 812 450-25-25</a><br> <!--Такой же класс, как и у телефона в шапке?-->
-          (с 10 до 20 ежедневно)
+          <a class="contacts-phone" href="tel:+781245502525">8 812 450-25-25</a><br>
+          <span class="contacts-worktime">(с 10 до 20 ежедневно)</span>
         </p>
-        <a class="btn" href="feedback.html">Форма обратной связи</a> <!--Нужен тут адрес?-->
+        <a class="btn" href="feedback.html">Форма обратной связи</a>
       </section>
     </main>
 
@@ -301,7 +307,7 @@
         <a class="copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">
           <img alt="html academy" src="img/htmlacademy.svg" width="108" height="39">
         </a>
-        Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a> &copy; 2017
+        Сделано в <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">html academy</a> &copy; 2017
       </div>
     </footer>
 
